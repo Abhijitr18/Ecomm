@@ -1,0 +1,23 @@
+{% extends "firstapp/base1.html" %}
+
+{% block title %}
+    <title> All Customers </title>
+{% endblock %}
+
+{% block content %}
+    <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Phone</th>
+        </tr>
+        {% for cust in customers %}
+        <tr>
+            <td>{{ cust.name }}</td>
+            <td>{{ cust.city }}</td>
+            <td>{{ cust.phone }}</td>
+        {% endfor %}
+        </tr>
+    </table>
+
+{% endblock %}

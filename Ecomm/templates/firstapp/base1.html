@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>Title</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'firstapp/css/style.css' %}">
+
+</head>
+<body>
+    <header>
+        <h1>Company Name </h1>
+        <ul class="my_navbar">
+            <li><a href="{% url 'home' %}">Home</a> </li>
+            <li><a href="{% url 'home' %}">About</a> </li>
+            <li><a href="{% url 'home' %}">Contact</a> </li>
+            <li><a href="{% url 'addcustomerdf' %} ">Add Customer</a> </li>
+            <li><a href="{% url 'allcustomer' %}">Show Customers</a> </li>
+            <li><a href="{% url 'addorderdf' %}">Add Orders</a> </li>
+            <li><a href="{% url 'allorderdf' %}">Show Orders</a> </li>
+        </ul>
+    </header>
+<br>
+{% block content%}
+ <h1> Write Ur cde Here </h1>
+{% endblock %}
+
+<br>
+
+
+
+<footer>
+    <h3> Copyright @ AR </h3>
+</footer>
+</body>
+</html>

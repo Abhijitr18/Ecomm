@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>Title</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href=" {% static firstapp/css/style.css %}">
+
+</head>
+<body>
+    <header>
+        <h1>Company Name </h1>
+        <ul class="my_navbar">
+            <li><a href="#">Home</a> </li>
+            <li><a href="#">About</a> </li>
+            <li><a href="#">Contact</a> </li>
+        </ul>
+    </header>
+<br>
+{% block content%}
+ <h1> Write Ur cde Here </h1>
+{% Endblock %}
+
+<br>
+<br>
+<br>
+<br>
+
+<footer>
+    <h3> Copyright @ AR </h3>
+</footer>
+</body>
+</html>
